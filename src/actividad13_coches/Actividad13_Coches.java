@@ -24,6 +24,10 @@ public class Actividad13_Coches {
         double tiempo2 = Tiempo(DISTANCIA, carro2.getVelocidad());
         
         CompararTiempo(tiempo1, tiempo2);
+        
+        Coche carroGanador = compararTiempoObjetos(carro1,carro2,DISTANCIA);
+        
+        System.out.println("El carro ganador es " + carroGanador.getMarca());
     }
     
     public static double Tiempo(int DISTANCIA,int velocidad)
@@ -43,5 +47,16 @@ public class Actividad13_Coches {
         else{
             System.out.println("El coche más rápido es el segundo coche");
         }
+    }
+    
+    private static Coche compararTiempoObjetos(Coche coche1, Coche coche2, int DISTANCIA) {
+        
+        double tiempo1 = Tiempo(DISTANCIA,coche1.getVelocidad());
+        double tiempo2 = Tiempo(DISTANCIA,coche2.getVelocidad());
+        
+        if(tiempo1<tiempo2)
+            return coche1;
+        else
+            return coche2;
     }
 }

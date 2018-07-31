@@ -14,6 +14,10 @@ public class Coche {
     private String tipo;
     private int velocidad;
     
+    //Constructor sin parametros
+    public Coche(){}
+    
+    //Constructor con parametros
     public Coche(String marca, String tipo, int velocidad)
     {
         this.marca = marca;
@@ -22,10 +26,10 @@ public class Coche {
     }
     
     public void Avanzar(int n_km){
-        
+        System.out.println("El " + this.getMarca() + " avanza " + n_km);
     }
     public void Parar(){
-        
+        System.out.println("El " + this.getMarca() + " se detuvo");
     }
 
     public String getMarca() {
